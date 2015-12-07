@@ -4,14 +4,7 @@ require_once __DIR__ . '/models/Country.php';
 require_once __DIR__ . '/classes/Connection.php';
 
 try {
-    $dbh = new Connection('mysql:dbname=yii2basic;host=127.0.0.1', 'root', '', [
-    // данная константа используется в том случае, если не знаешь какая кодировка у данных в базе
-    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
-    ]);
-    // установка атрибута: режим ошибок, со значением: выброса исключений
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // установка атрибута: режим выборки данных по умолчанию, со значением: объект класса stdClass
-    $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+    $dbh = new Connection(include __DIR__ . 'config.php');
 
     // подготовленный запрос (метод класса PDO)
     $sth = $dbh->prepare('SELECT * FROM country WHERE code=:code');
