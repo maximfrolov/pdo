@@ -1,6 +1,7 @@
 <?php
 
-require __DIR__ . '/models/Country.php';
+require_once __DIR__ . '/models/Country.php';
+require_once __DIR__ . '/classes/Connection.php';
 
 try {
     $dbh = new Connection('mysql:dbname=yii2basic;host=127.0.0.1', 'root', '', [
