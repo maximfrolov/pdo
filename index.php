@@ -17,7 +17,7 @@ try {
     // запуск подготовленного запроса (метод класса PDOStatement)
     $sth->execute([':code' => 'RU']);
     // возврат результата запроса (метод класса PDOStatement)
-    $res = $sth->fetchAll();
+    $res = $sth->fetchAll(PDO::FETCH_CLASS, Country::class);
 
     var_dump($res);
 
