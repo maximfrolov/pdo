@@ -8,11 +8,11 @@ try {
     // установка атрибута: режим ошибок, со значением: выброса исключений
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // подготовленный запрос
+    // подготовленный запрос (метод класса PDO)
     $sth = $dbh->prepare('SELECT * FROM country WHERE code=:code');
-    // запуск подготовленного запроса
+    // запуск подготовленного запроса (метод класса PDOStatement)
     $sth->execute([':code' => 'RU']);
-    // возврат результата запроса
+    // возврат результата запроса (метод класса PDOStatement)
     $res = $sth->fetchAll();
 
     var_dump($res);
