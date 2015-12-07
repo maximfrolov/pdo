@@ -5,6 +5,7 @@ try {
     // данная константа используется в том случае, если не знаешь какая кодировка у данных в базе
     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
     ]);
+
     // установка атрибута: режим ошибок, со значением: выброса исключений
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // подготовленный запрос
@@ -13,7 +14,9 @@ try {
     $sth->execute();
     // возврат результата запроса
     $res = $sth->fetchAll();
+
     var_dump($res);
+
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
