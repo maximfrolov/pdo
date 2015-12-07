@@ -23,5 +23,5 @@ try {
     var_dump($res);
 
 } catch (PDOException $e) {
-    echo $e->getMessage();
+    echo 'Подключение не удалось: ' . $e->getMessage();
 }
