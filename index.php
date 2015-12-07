@@ -9,6 +9,8 @@ try {
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // подготовленный запрос
     $sth = $dbh->prepare('SELECT * FROM country');
+    // запуск подготовленного запроса
+    $sth->execute();
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
