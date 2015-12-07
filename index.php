@@ -4,7 +4,7 @@ require_once __DIR__ . '/models/Country.php';
 require_once __DIR__ . '/classes/Connection.php';
 
 try {
-    $dbh = new Connection(include __DIR__ . 'config.php');
+    $dbh = new Connection(include 'config.php');
 
     // подготовленный запрос (метод класса PDO)
     $sth = $dbh->prepare('SELECT * FROM country WHERE code=:code');
