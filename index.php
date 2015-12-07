@@ -7,6 +7,8 @@ try {
     ]);
     // установка атрибута: режим ошибок, со значением: выброса исключений
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // подготовленный запрос
+    $sth = $dbh->prepare('SELECT * FROM country');
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
