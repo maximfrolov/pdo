@@ -11,6 +11,9 @@ try {
     $sth = $dbh->prepare('SELECT * FROM country');
     // запуск подготовленного запроса
     $sth->execute();
+    // возврат результата запроса
+    $res = $sth->fetchAll();
+    var_dump($res);
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
