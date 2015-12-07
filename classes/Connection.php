@@ -4,6 +4,6 @@ class Connection
     extends PDO
 {
 
-    
+
 
 }
