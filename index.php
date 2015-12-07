@@ -7,6 +7,8 @@ try {
     ]);
     // установка атрибута: режим ошибок, со значением: выброса исключений
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // установка атрибута: режим выборки данных по умолчанию, со значением: объект класса stdClass
+    $dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
     // подготовленный запрос (метод класса PDO)
     $sth = $dbh->prepare('SELECT * FROM country WHERE code=:code');
