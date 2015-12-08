@@ -13,7 +13,8 @@ class Country
     public static function findAll()
     {
         $dbh = new Connection();
-        $sth = $dbh->prepare('SELECT * FROM' . self::TABLE);
+        $sth = $dbh->prepare('SELECT * FROM ' . self::TABLE);
+        $sth->execute();
         return $sth->fetchAll(PDO::FETCH_CLASS, self::class);
     }
 
