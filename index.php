@@ -8,14 +8,12 @@ try {
 
     // подготовленный запрос (метод класса PDO)
     $sth = $dbh->prepare('SELECT * FROM country WHERE code=:code');
+    // привязка параметра к заданному значению, с явно заданным типом данных этого значения
+    $sth->bindValue(':code', 'RU', PDO::PARAM_STR);
     // запуск подготовленного запроса (метод класса PDOStatement)
-    $sth->execute([':code' => 'RU']);
+    $sth->execute();
     // возврат результата запроса (метод класса PDOStatement)
     $res = $sth->fetchAll(PDO::FETCH_CLASS, Country::class);
-
-    $sth = $dbh->prepare('SELECT COUNT(*) FROM country');
-    $sth->execute();
-    $res = $sth->fetchOne();
 
     var_dump($res);
 
