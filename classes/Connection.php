@@ -6,8 +6,9 @@ class Connection
     extends PDO
 {
 
-    public function __construct($config)
+    public function __construct()
     {
+        $config = include __DIR__ . '/../config.php';
         $dsn = $config['driver'] . ':dbname=' . $config['dbname'] . ';host=' . $config['host'];
         parent::__construct(
             $dsn,
