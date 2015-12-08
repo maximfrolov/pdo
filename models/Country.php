@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../classes/Connection.php';
+
 class Country
 {
     const TABLE = 'country';
