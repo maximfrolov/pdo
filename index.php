@@ -13,6 +13,10 @@ try {
     // возврат результата запроса (метод класса PDOStatement)
     $res = $sth->fetchAll(PDO::FETCH_CLASS, Country::class);
 
+    $sth = $dbh->prepare('SELECT COUNT(*) FROM country');
+    $sth->execute();
+    $res = $sth->fetchOne();
+
     var_dump($res);
 
 } catch (PDOException $e) {
