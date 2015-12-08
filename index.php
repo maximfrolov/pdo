@@ -13,7 +13,8 @@ try {
     $sth->execute();
     // возврат результата запроса (метод класса PDOStatement)
     $res = $sth->fetchAll(PDO::FETCH_CLASS, Country::class);*/
-
+    $data = Country::findAll();
+    var_dump($data);
 
 } catch (PDOException $e) {
     echo 'Подключение не удалось: ' . $e->getMessage();
