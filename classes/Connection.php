@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/Statement.php';
+
 class Connection
     extends PDO
 {
