@@ -1,11 +1,9 @@
 <?php
 
-namespace App\models;
+namespace models;
 
 use \PDO;
-use App\classes\Connection;
-
-require_once __DIR__ . '/../classes/Connection.php';
+use classes\Connection;
 
 abstract class Model
 {

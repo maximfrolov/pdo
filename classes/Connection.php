@@ -1,10 +1,8 @@
 <?php
 
-namespace App\classes;
+namespace classes;
 
 use \PDO;
-
-require __DIR__ . '/Statement.php';
 
 class Connection
     extends PDO

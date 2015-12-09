@@ -1,6 +1,6 @@
 <?php
 
-namespace App\classes;
+namespace classes;
 
 use \PDO;
 use \PDOStatement;

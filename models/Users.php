@@ -1,8 +1,6 @@
 <?php
 
-namespace App\models;
-
-require_once __DIR__ . '/Model.php';
+namespace models;
 
 class Users
     extends Model
