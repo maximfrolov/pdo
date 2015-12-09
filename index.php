@@ -1,13 +1,12 @@
 <?php
 
-namespace App\controllers;
+namespace controllers;
 
-use App\models\Country;
-use App\models\Users;
+use models\Country;
+use models\Users;
 use \PDOException;
 
-require_once __DIR__ . '/models/Country.php';
-require_once __DIR__ . '/models/Users.php';
+require __DIR__ . '/autoload.php';
 
 try {
 
