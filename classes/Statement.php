@@ -1,5 +1,10 @@
 <?php
 
+namespace App\classes;
+
+use \PDO;
+use \PDOStatement;
+
 class Statement
     extends PDOStatement
 

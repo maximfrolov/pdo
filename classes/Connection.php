@@ -1,5 +1,9 @@
 <?php
 
+namespace App\classes;
+
+use \PDO;
+
 require __DIR__ . '/Statement.php';
 
 class Connection

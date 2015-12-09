@@ -1,5 +1,7 @@
 <?php
 
+namespace App\models;
+
 require_once __DIR__ . '/Model.php';
 
 class Country

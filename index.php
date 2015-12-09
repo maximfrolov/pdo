@@ -1,5 +1,11 @@
 <?php
 
+namespace App\controllers;
+
+use App\models\Country;
+use App\models\Users;
+use \PDOException;
+
 require_once __DIR__ . '/models/Country.php';
 require_once __DIR__ . '/models/Users.php';
 
