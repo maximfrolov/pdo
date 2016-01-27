@@ -8,6 +8,8 @@ use classes\Connection;
 abstract class Model
 {
 
+    const TABLE = '';
+
     public static function findAll()
     {
         $dbh = new Connection();
